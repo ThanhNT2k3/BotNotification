@@ -1,0 +1,6 @@
+vnstock
+pandas
+requests
+pytz
+flask
+flask
