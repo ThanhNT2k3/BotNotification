@@ -74,10 +74,27 @@ VNT_TIMEZONE = pytz.timezone('Asia/Ho_Chi_Minh')
 START_TIME = datetime.time(9, 0)
 END_TIME = datetime.time(18, 30)
 
+# No notification periods (times when notifications should not be sent)
+NO_NOTIFICATION_PERIODS = [
+    (datetime.time(11, 30), datetime.time(13, 0)),  # 11:30 - 13:00
+    (datetime.time(15, 0), datetime.time(18, 0)),   # 15:00 - 18:00
+]
+
 # How often to run (in seconds) - e.g., every 30 minutes
 RUN_INTERVAL = 1 * 60
 
 # --- FUNCTIONS ---
+
+
+def is_notification_blackout(current_time):
+    """
+    Check if the current time falls within any of the no-notification periods.
+    Returns True if notifications should be skipped, False otherwise.
+    """
+    for start_time, end_time in NO_NOTIFICATION_PERIODS:
+        if start_time <= current_time <= end_time:
+            return True
+    return False
 
 
 def get_stock_data(symbols):
@@ -397,8 +414,13 @@ def run_bot():
                 # 4. Print Summary to Console
                 print_portfolio_summary(portfolio_data)
 
-                # 5. Send Notification (Optional)
-                send_discord_notification(portfolio_data)
+                # 5. Send Notification (Optional) - Skip during blackout periods
+                if is_notification_blackout(current_time):
+                    print(
+                        f"Skipping notification during blackout period ({current_time})"
+                    )
+                else:
+                    send_discord_notification(portfolio_data)
 
                 # Wait for next interval
                 print(f"Sleeping for {RUN_INTERVAL} seconds...")
