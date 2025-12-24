@@ -15,28 +15,23 @@ DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1446127614648516628/ImVV
 # Format: 'SYMBOL': {'quantity': float, 'avg_price': float, 'type': 'stock' or 'fund'}
 PORTFOLIO = {
     'MBB': {
-        'quantity': 2300,
-        'avg_price': 25.81,
+        'quantity': 2400,
+        'avg_price': 25.72,
         'type': 'stock'
     },
     'HPG': {
-        'quantity': 980,
-        'avg_price': 24.06,
+        'quantity': 1280,
+        'avg_price': 24.74,
         'type': 'stock'
     },
     'PDR': {
-        'quantity': 400,
+        'quantity': 200,
         'avg_price': 26.06,
         'type': 'stock'
     },
-    'SHB': {
-        'quantity': 630,
-        'avg_price': 12.53,
-        'type': 'stock'
-    },
     'SSI': {
-        'quantity': 1800,
-        'avg_price': 32.08,
+        'quantity': 1160,
+        'avg_price': 29.23,
         'type': 'stock'
     },
     'VCI': {
