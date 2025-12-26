@@ -20,8 +20,8 @@ PORTFOLIO = {
         'type': 'stock'
     },
     'HPG': {
-        'quantity': 1280,
-        'avg_price': 24.74,
+        'quantity': 1480,
+        'avg_price': 24.98,
         'type': 'stock'
     },
     'PDR': {
@@ -30,7 +30,7 @@ PORTFOLIO = {
         'type': 'stock'
     },
     'SSI': {
-        'quantity': 1160,
+        'quantity': 360,
         'avg_price': 29.23,
         'type': 'stock'
     },
@@ -72,12 +72,11 @@ VNT_TIMEZONE = pytz.timezone('Asia/Ho_Chi_Minh')
 
 # Schedule
 START_TIME = datetime.time(9, 0)
-END_TIME = datetime.time(18, 30)
+END_TIME = datetime.time(15, 0)
 
 # No notification periods (times when notifications should not be sent)
 NO_NOTIFICATION_PERIODS = [
     (datetime.time(11, 30), datetime.time(13, 0)),  # 11:30 - 13:00
-    (datetime.time(15, 0), datetime.time(18, 0)),   # 15:00 - 18:00
 ]
 
 # How often to run (in seconds) - e.g., every 30 minutes
