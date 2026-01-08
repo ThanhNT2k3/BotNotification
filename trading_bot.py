@@ -34,9 +34,14 @@ PORTFOLIO = {
         'avg_price': 29.23,
         'type': 'stock'
     },
+    'CTG': {
+        'quantity': 800,
+        'avg_price': 38.05,
+        'type': 'stock'
+    },
     'VCI': {
         'quantity': 500,
-        'avg_price': 42.31,
+        'avg_price': 41.81,
         'type': 'stock'
     },
     'VMEEF': {
