@@ -20,8 +20,8 @@ PORTFOLIO = {
         'type': 'stock'
     },
     'HPG': {
-        'quantity': 1480,
-        'avg_price': 24.98,
+        'quantity': 2480,
+        'avg_price': 25.96,
         'type': 'stock'
     },
     'PDR': {
@@ -39,36 +39,16 @@ PORTFOLIO = {
         'avg_price': 38.05,
         'type': 'stock'
     },
+    'HDB': {
+        'quantity': 700,
+        'avg_price': 28.63,
+        'type': 'stock'
+    },
     'VCI': {
         'quantity': 500,
         'avg_price': 41.81,
         'type': 'stock'
-    },
-    'VMEEF': {
-        'quantity': 6745.51,
-        'avg_price': 14.750,
-        'type': 'fund'
-    },
-    'VCBFBCF': {
-        'quantity': 344.33,
-        'avg_price': 42.094,
-        'type': 'fund'
-    },
-    'TCFIN': {
-        'quantity': 2762.31,
-        'avg_price': 13.502,
-        'type': 'fund'
-    },
-    'VEOF': {
-        'quantity': 1940.56,
-        'avg_price': 31.940,
-        'type': 'fund'
-    },
-    'DCDS': {
-        'quantity': 205.98,
-        'avg_price': 105.760,
-        'type': 'fund'
-    },
+    }
     # Add more assets here
 }
 
